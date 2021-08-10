@@ -39,7 +39,7 @@
     height: 840px;
     justify-content: center;
     align-items: center;
-    color:coral;
+    color:White;
 
 }
 #iback{
@@ -111,15 +111,32 @@
     margin-bottom: 20px;
 }
 
-/* portfolio */
-#portfolio{
+
+
+
+
+/* services */
+.row{
     display: flex;
     flex-direction: column;
+    padding: 50px;
 }
-.gallery{
+#gallery{
     display: flex;
 }
-.gallery img{
+.img{
     width: 360px;
     height: 240px;
+    padding: 30px;
+}
+.text{
+    padding: 50px;
+    background-color: black;
+    color: azure;
+    text-align: center;
+}
+
+.description{
+    color: black;
+    background-color:blanchedalmond;
 }

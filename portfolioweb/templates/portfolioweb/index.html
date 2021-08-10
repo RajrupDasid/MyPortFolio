@@ -24,9 +24,14 @@
         {% endfor %}
         <div class="main">
             {% for i in details %}
-                <h1 class="headings">Greetings form <br> {{i.name}}</h1>
+                <h1 class="headings">GREETINGS FROM <br> {{i.name}}</h1>
                 <button class="btn">
                     See Resume
+                </button>
+                <br>
+                <br>
+                <button class="btn">
+                    HIRE ME
                 </button>
             {% endfor %}
         </div>
@@ -43,13 +48,35 @@
             </div>
         {% endfor %}
     </section>
+    <section id="myportfolio">
+        <h1 class="newheadings">PORTFOLIO</h1>
+        {% for in in my %}
+            <div class="career"><p>My career: {{i.careersummary}}</p></div>
+            <br>
+            <br>
+            <div class="bio"><p>A short description of my bio graphy: {{i.biography}}</p>
+            <div class="skills">Knowledge and skills in this languages </div>
+        {% endfor %}
+    </section>
     <section id="portfolio">
-        <h1 class="headings">PORTFOLIO</h1>
-        <div class="gallery">
+        <h1 class="headings">SERVICES</h1>
+        <div class="row">
             {% for i in pf %}
-                <img src={{i.portfolio_image.url}} alt="">
+                <div class="col-sm-4">
+                    <div class="card m-2">
+                        <br>
+                        <h4 class="text">{{i.title}}</h4>
+                        <br>
+                        <br>
+                        <img src="{{i.portfolio_image.url}}" alt="" class="img">
+                        <br>
+                        <br>
+                        <h5 class="description">{{i.description}}</h5>
+                    </div>
+                </div>
             {% endfor %}
         </div>
     </section>
+
 </body>
 </html>
