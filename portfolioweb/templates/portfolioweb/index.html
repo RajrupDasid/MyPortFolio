@@ -10,12 +10,14 @@
 </head>
 <body>
     <nav class="navbar">
+        <h3 class="head">DEV-Raj PortFolio</h3>
         <ul>
             <li><a href="#">Home</a></li> 
             <li><a href="#">PortFolio</a></li> 
             <li><a href="#">Services</a></li> 
             <li><a href="#">About Me</a></li> 
-            <li><a href="#">Contact Me</a></li> 
+            <li><a href="#">Contact Me</a></li>
+            <li><a href="https://www.github.com/RajrupDasid">My Github Profile</a></li>
         </ul>
     </nav>
     <section id="home">
@@ -25,14 +27,15 @@
         <div class="main">
             {% for i in details %}
                 <h1 class="headings">GREETINGS FROM <br> {{i.name}}</h1>
-                <button class="btn">
-                    See Resume
-                </button>
+                <h3 class="dev">I am a Certified Python Developer</h3>
+                <a href="#"><button class="btn">
+                    SEE RESUME
+                </button></a>
                 <br>
                 <br>
-                <button class="btn">
+                <a href="#"><button class="hbtn">
                     HIRE ME
-                </button>
+                </button></a>
             {% endfor %}
         </div>
     </section>
@@ -50,13 +53,32 @@
     </section>
     <section id="myportfolio">
         <h1 class="newheadings">PORTFOLIO</h1>
-        {% for in in my %}
-            <div class="career"><p>My career: {{i.careersummary}}</p></div>
-            <br>
-            <br>
-            <div class="bio"><p>A short description of my bio graphy: {{i.biography}}</p>
-            <div class="skills">Knowledge and skills in this languages </div>
+        {% for i in my %}
+            <div class="career">
+                <ul>
+                    <p>My career: </p> 
+                    <li>{{i.careersummary}}</li>
+                </ul>
+            </div>
         {% endfor %}
+        {% for i in my %}
+            <div class="bio">
+                <ul>
+                    <p>A short description of my bio graphy:</p>
+                    <li>{{i.biography}}</li>
+                </ul>
+            </div>
+        {% endfor %}
+        <br>
+        <br>
+            <div class="skills">
+                <ul>
+                    I have Knowdledge in this languages: 
+                    {% for i in my %}
+                        <li>{{i.skills}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
     </section>
     <section id="portfolio">
         <h1 class="headings">SERVICES</h1>
@@ -64,14 +86,14 @@
             {% for i in pf %}
                 <div class="col-sm-4">
                     <div class="card m-2">
-                        <br>
-                        <h4 class="text">{{i.title}}</h4>
-                        <br>
-                        <br>
-                        <img src="{{i.portfolio_image.url}}" alt="" class="img">
-                        <br>
-                        <br>
-                        <h5 class="description">{{i.description}}</h5>
+                            <br>
+                            <h4 class="text">{{i.title}}</h4>
+                            <br>
+                            <br>
+                            <img src="{{i.portfolio_image.url}}" alt="" class="img">
+                            <br>
+                            <br>
+                            <h4 class="description">{{i.description}}</h4>
                     </div>
                 </div>
             {% endfor %}

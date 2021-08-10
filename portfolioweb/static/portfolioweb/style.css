@@ -7,8 +7,8 @@
     display: flex;
     justify-content: center;
     align-items:center ;
-    background-color:transparent;
-    position: sticky;
+    background-color:black;
+    position: unset;
     top: 0;
 }
 .navbar ul{
@@ -32,6 +32,11 @@
     color:white;
     box-shadow: 0 0 10px aquamarine;
 }
+.head{
+    color: whitesmoke;
+    padding: 26px;
+    
+}
 #home{
     display: flex;
     flex-direction: column;
@@ -50,7 +55,7 @@
     height: 900px;
     width: 100%;
     z-index: -1;
-    opacity: .9;
+    opacity: .8;
 }
 .main{
     display: flex;
@@ -58,7 +63,7 @@
     /*border: 1px solid white;*/
     align-items: center;
     position: absolute;
-    top: 56%;
+    top: 30%;
     right: 39%;
 
 }
@@ -75,6 +80,30 @@
     color: white;
     outline: none;
     transition: .6s ease;
+    margin: 11px;
+}
+.hbtn{
+    padding: 10px 47px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    outline: none;
+    transition: .6s ease;
+    margin: 11px;
+}
+.hbtn:hover{
+    cursor: pointer;
+    background-color: crimson;
+    color:white;
+    box-shadow: 0 0 5px white, 0 0 10px whitesmoke, 0 0 15px white ;
+    font-weight: bold;
+
+}
+.dev{
+    margin:auto;
+    color: crimson;
+    background-color: whitesmoke;
+    padding: 15px 15px;
 }
 .btn:hover{
     cursor: pointer;
@@ -111,9 +140,30 @@
     margin-bottom: 20px;
 }
 
-
-
-
+/* my port folio */
+#portfolio{
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+}
+.newheadings{
+    padding: 50px;
+    text-align: center;
+    font-size: 45px;
+}
+.career{
+    text-align: center;
+    background-color: whitesmoke;
+    margin: 30px;
+}
+.bio{
+    text-align: center;
+    background-color: whitesmoke;
+}
+.skills{
+    text-align: center;
+    background-color: whitesmoke;
+}
 
 /* services */
 .row{
@@ -125,9 +175,10 @@
     display: flex;
 }
 .img{
-    width: 360px;
-    height: 240px;
-    padding: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
 }
 .text{
     padding: 50px;
@@ -138,5 +189,5 @@
 
 .description{
     color: black;
-    background-color:blanchedalmond;
+    background-color:aliceblue;
 }
