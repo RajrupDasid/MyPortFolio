@@ -57,7 +57,7 @@
             <div class="career">
                 <ul>
                     <p>My career: </p> 
-                    <li>{{i.careersummary}}</li>
+                    <li>{{i.careersummary|safe}}</li>
                 </ul>
             </div>
         {% endfor %}
@@ -65,7 +65,7 @@
             <div class="bio">
                 <ul>
                     <p>A short description of my bio graphy:</p>
-                    <li>{{i.biography}}</li>
+                    <li>{{i.biography|safe}}</li>
                 </ul>
             </div>
         {% endfor %}
@@ -75,7 +75,7 @@
                 <ul>
                     I have Knowdledge in this languages: 
                     {% for i in my %}
-                        <li>{{i.skills}}</li>
+                        <li>{{i.skills|safe}}</li>
                     {% endfor %}
                 </ul>
             </div>
@@ -93,7 +93,7 @@
                             <img src="{{i.portfolio_image.url}}" alt="" class="img">
                             <br>
                             <br>
-                            <h4 class="description">{{i.description}}</h4>
+                            <h4 class="description">{{i.description|safe}}</h4>
                     </div>
                 </div>
             {% endfor %}
