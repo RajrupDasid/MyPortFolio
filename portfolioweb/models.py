@@ -45,6 +45,9 @@ class Contact(models.Model):
     email=models.EmailField(max_length=255)
     description=models.TextField()
     timestamp=models.DateTimeField(auto_now_add=True)
-
     def __str__(self):
         return f"{self.name}-{self.email}"
+
+class PageImage(models.Model):
+    imageview=models.ImageField(upload_to='contactsectionbackground',default='contact.png')
+    created=models.DateTimeField(auto_now_add=True)

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Details,PortFolio,MyPortFolio,Contact
+from .models import Details,PortFolio,MyPortFolio,Contact,PageImage
 # Create your views here.
 def index(request):
     details=Details.objects.all()
@@ -24,3 +24,18 @@ def index(request):
         'greet':greet,
     }
     return render(request,'portfolioweb/index.html', context)
+
+def contactme(request):
+    bg=PageImage.objects.all()
+    print(bg)
+    if request.method=='POST':
+        name=request.POST['name']
+        email=request.POST['email']
+        phone=request.POST['phone']
+        description=request.POST['description']
+        contact=Contact(name=name,email=email,phone=phone,description=description)
+        contact.save()
+    context={
+        'bg':bg,
+    }
+    return render(request,'portfolioweb/contact.html',context)

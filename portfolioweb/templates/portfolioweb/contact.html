@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'portfolioweb/style.css' %}">
+    <title>Contact me</title>
+</head>
+<body>
+    <nav class="navbar">
+        <h3 class="head">DEV-Raj PortFolio</h3>
+        <ul>
+            <li><a href="#">Home</a></li> 
+            <li><a href="#">PortFolio</a></li> 
+            <li><a href="#">Services</a></li> 
+            <li><a href="#">About Me</a></li> 
+            <li><a href="">Contact Me</a></li>
+            <li><a href="https://www.github.com/RajrupDasid">My Github Profile</a></li>
+        </ul>
+    </nav>
+    <section id="contact">
+        {% for i in bg %}
+            <img src="{{i.imageview.url}}" id="iback">
+        {% endfor %}
+        <div class="container">
+            <h1 class="con">CONTACT ME</h1>
+            <form action="/contact"method="POST"  enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-2">
+                    <label for="name" class="form-label">Your name</label>
+                    <input type="text" class="form-control" id="name" name="name">
+                </div>
+                <br>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                </div>
+                <br>
+                <div class="mb-4">
+                    <label for="phone number" class="form-label">Your contact number</label>
+                    <input type="phonenumber" class="form-control" id="phone" name="phone">
+                </div>
+                <br>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave your message here" id="floatingTextarea2" style="height: 200px; width: 560px;" name="description"></textarea>
+                </div>
+                <div  class="btn">
+                    <button type="btn" class="sbtn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
