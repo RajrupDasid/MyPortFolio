@@ -181,13 +181,45 @@
     width: 35%;
 }
 .text{
+    margin: 50px;
     padding: 50px;
-    background-color: black;
+    background-color:cadetblue;
     color: azure;
     text-align: center;
 }
 
 .description{
+    margin: 40px;
+    padding: 22px 40px;
     color: black;
     background-color:aliceblue;
+}
+
+/* Contact section */
+.container{
+    text-align: center;
+    margin: 20px;
+    padding: 20px 40px;
+}
+.con{
+    margin: 60px;
+    background-color: blanchedalmond;
+    padding: 23px 40px;
+}
+
+.sbtn{
+    padding: 10px 35px;
+    background-color:thistle;
+    border: 1px solid white;
+    color: white;
+    outline: none;
+    transition: .6s ease;
+    margin: 11px;
+}
+.sbtn:hover{
+    background-color:darkcyan;
+    cursor: pointer;
+    box-shadow: 0 0 5px white, 0 0 10px whitesmoke, 0 0 15px white ;
+    font-weight: bold;
+
 }

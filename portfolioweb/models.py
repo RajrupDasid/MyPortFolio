@@ -36,3 +36,15 @@ class MyPortFolio(models.Model):
 
     def __str__(self):
         return f"{self.careersummary}"
+
+
+class Contact(models.Model):
+    sno=models.AutoField(primary_key=True)
+    name=models.CharField(max_length=255)
+    phone=models.CharField(max_length=50)
+    email=models.EmailField(max_length=255)
+    description=models.TextField()
+    timestamp=models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.name}-{self.email}"
