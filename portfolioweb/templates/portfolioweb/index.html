@@ -12,10 +12,10 @@
     <nav class="navbar">
         <h3 class="head">DEV-Raj PortFolio</h3>
         <ul>
-            <li><a href="#">Home</a></li> 
+            <li><a href="">Home</a></li> 
             <li><a href="#">PortFolio</a></li> 
             <li><a href="#">Services</a></li> 
-            <li><a href="#">About Me</a></li> 
+            <li><a href="{% url 'about' %}">About Me</a></li> 
             <li><a href="{% url 'contact_url' %}">Contact Me</a></li>
             <li><a href="https://www.github.com/RajrupDasid">My Github Profile</a></li>
         </ul>
@@ -46,7 +46,7 @@
                 <img src="{{i.profile_image.url}}" alt="">
                 <div id="intro">
                     <h2>{{i.name}}</h2>
-                    <p>{{i.bio}}</p>
+                    <p>{{i.bio|safe}}</p>
                 </div>
             </div>
         {% endfor %}

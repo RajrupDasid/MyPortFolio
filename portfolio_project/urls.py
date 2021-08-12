@@ -17,11 +17,13 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
-from portfolioweb.views import *
+from portfolioweb.views import contactme,aboutme
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('portfolioweb.urls', namespace='portfolioweb')),
+    path('',include('portfolioweb.urls', namespace='index')),
     path('contact/',contactme,name='contact_url'),
+    path('about/',aboutme,name="about"),
     path('ckeditor/',include('ckeditor_uploader.urls')),
+
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns+=static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)

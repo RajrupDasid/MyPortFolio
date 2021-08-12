@@ -39,3 +39,10 @@ def contactme(request):
         'bg':bg,
     }
     return render(request,'portfolioweb/contact.html',context)
+
+def aboutme(request):
+    about=Details.objects.all()
+    context={
+        'about':about,
+    }
+    return render(request,'portfolioweb/aboutme.html',context)

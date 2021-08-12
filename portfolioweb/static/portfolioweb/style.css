@@ -224,3 +224,24 @@
     font-weight: bold;
 
 }
+
+/* about me  */
+.myimage{
+    height: 320px;
+    width: 240px;
+    content: icon;
+    padding: 50px 24px;
+}
+#cont{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom:50px;
+}
+.name{
+    color: white;
+    background-color:cadetblue;
+    margin: 20px;
+}

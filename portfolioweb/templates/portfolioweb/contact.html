@@ -15,8 +15,8 @@
             <li><a href="#">Home</a></li> 
             <li><a href="#">PortFolio</a></li> 
             <li><a href="#">Services</a></li> 
-            <li><a href="#">About Me</a></li> 
-            <li><a href="">Contact Me</a></li>
+            <li><a href="{% url 'about' %}">About Me</a></li> 
+            <li><a href="{% url 'contact_url' %}">Contact Me</a></li>
             <li><a href="https://www.github.com/RajrupDasid">My Github Profile</a></li>
         </ul>
     </nav>
@@ -26,7 +26,7 @@
         {% endfor %}
         <div class="container">
             <h1 class="con">CONTACT ME</h1>
-            <form action="/contact"method="POST"  enctype="multipart/form-data">
+            <form action="" method="POST"  enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="mb-2">
                     <label for="name" class="form-label">Your name</label>

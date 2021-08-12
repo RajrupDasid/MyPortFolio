@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'portfolioweb/style.css' %}">
+    <title>About Me</title>
+</head>
+<body>
+    <nav class="navbar">
+        <h3 class="head">DEV-Raj PortFolio</h3>
+        <ul>
+            <li><a href="#" >Home</a></li> 
+            <li><a href="#">PortFolio</a></li> 
+            <li><a href="#">Services</a></li> 
+            <li><a href="{% url 'about' %}">About Me</a></li> 
+            <li><a href="{% url 'contact_url' %}">Contact Me</a></li>
+            <li><a href="https://www.github.com/RajrupDasid">My Github Profile</a></li>
+        </ul>
+    </nav>
+    <section class="about">
+        <div class="container" id="cont">
+            {% for i in about %}
+                <img src="{{i.profile_image.url}}" class="myimage">
+                <div class="details">
+                    <ul>
+                        <h2 class="name">NAME:  {{i.name}}</h2>
+                        <br>
+                        <h3>Gender: {{i.gender}}</h3>
+                        <br>
+                        <h3>Email: {{i.email}}</h3>
+                        <br>
+                        <h3>Phone Number: {{i.contact}}</h3>
+                        <br>
+                        <h4>Bio: {{i.bio|safe}}</h4>
+                        <br>
+                        <h4>Address: {{i.address}}</h4>
+                        <br>
+                        <hr>
+                    </ul>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+</body>
+</html>
