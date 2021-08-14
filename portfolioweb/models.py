@@ -51,3 +51,16 @@ class Contact(models.Model):
 class PageImage(models.Model):
     imageview=models.ImageField(upload_to='contactsectionbackground',default='contact.png')
     created=models.DateTimeField(auto_now_add=True)
+
+class Service(models.Model):
+    skills=RichTextUploadingField()
+
+    def __str__(self):
+        return f"{self.skills}"
+
+class DetailedPortFolio(models.Model):
+    identify=models.CharField(max_length=50,blank=True,null=True)
+    detailed_career_summary=RichTextUploadingField()
+
+    def __str__(self):
+        return f"{self.identify}"

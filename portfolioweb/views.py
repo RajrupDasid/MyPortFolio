@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from .models import Details,PortFolio,MyPortFolio,Contact,PageImage
+from django.shortcuts import render,redirect
+from .models import Details,PortFolio,MyPortFolio,Contact,PageImage,Service,DetailedPortFolio
 # Create your views here.
 def index(request):
     details=Details.objects.all()
@@ -46,3 +46,21 @@ def aboutme(request):
         'about':about,
     }
     return render(request,'portfolioweb/aboutme.html',context)
+
+
+def myservices(request):
+    services=Service.objects.all()
+    context={
+        'services':services,
+    }
+    return render(request,'portfolioweb/services.html',context)
+
+
+def myportfolio(request):
+    myportfolio=DetailedPortFolio.objects.all()
+
+    context={
+        "mpf":myportfolio,
+    }
+    return render(request,'portfolioweb/myportfolio.html',context)
+

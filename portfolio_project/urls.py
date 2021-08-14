@@ -17,12 +17,14 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
-from portfolioweb.views import contactme,aboutme
+from portfolioweb.views import contactme,aboutme,myservices,myportfolio
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('portfolioweb.urls', namespace='index')),
     path('contact/',contactme,name='contact_url'),
     path('about/',aboutme,name="about"),
+    path('myservices/',myservices,name="myservices"),
+    path('myportfolio',myportfolio,name="portfolio"),
     path('ckeditor/',include('ckeditor_uploader.urls')),
 
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -245,3 +245,32 @@
     background-color:cadetblue;
     margin: 20px;
 }
+
+/* services pages */
+.service{
+    background-color: aliceblue;
+    text-align: center;
+    margin: 30px;
+    color:black;
+}
+.details{
+    margin: 15px;
+    font-weight: bold;
+    color: black;
+}
+.skills{
+    margin: 15px;
+}
+
+/* my portfolio */
+.portfolio{
+    margin: 20px;
+    background-color: aliceblue;
+    text-align: center;
+}
+.sum{
+    margin: auto;
+}
+.mysum{
+    margin: 15px;
+}

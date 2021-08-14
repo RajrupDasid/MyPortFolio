@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'portfolioweb/style.css' %}">
+    <title>myportfolio</title>
+</head>
+<body>
+    <nav class="navbar">
+        <h3 class="head">DEV-Raj PortFolio</h3>
+        <ul>
+            <li><a href="">Home</a></li> 
+            <li><a href="{% url 'portfolio' %}">PortFolio</a></li>  
+            <li><a href="{% url 'myservices' %}">Services</a></li> 
+            <li><a href="{% url 'about' %}">About Me</a></li> 
+            <li><a href="{% url 'contact_url' %}">Contact Me</a></li>
+            <li><a href="https://www.github.com/RajrupDasid">My Github Profile</a></li>
+        </ul>
+    </nav>
+    <div class="portfolio">
+        {% for i in mpf %}
+            <div class="sum">   
+                Detailed Summary of my career
+                <p class="mysum">{{i.detailed_career_summary|safe}}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
